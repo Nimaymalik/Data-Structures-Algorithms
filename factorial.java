@@ -1,27 +1,17 @@
+package StringBuffer;
+
+import java.math.BigInteger;
 
 public class factorial {
-    public static void main(String[] args) {
+    static BigInteger fact(int num) {
 
-        System.out.println(factor(-2));
-    }
-
-    static int factor(int num) {
-        // num=5
-        int ans = 1;
-
-        if (num == 0 || num == 1) {
-            return 1;
-        } else if (num < 0) {
-            return -1;
+        BigInteger ans = new BigInteger("1");// initial value is 1
+        for (int i = 2; i < num; i++) {
+            ans = ans.multiply(BigInteger.valueOf(i));
 
         }
-
-        while (num != 0) {
-            ans *= num;
-            num--;
-
-        }
-
         return ans;
+
     }
+
 }
