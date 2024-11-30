@@ -3,7 +3,7 @@ package TreeLeetCode;
 
 import java.util.*;
 
-public class BinaryTreeLeveTraversal {
+public class BinaryTreeLevelOrder2 {
     public class TreeNode {
         TreeNode left;
         TreeNode right;
@@ -23,46 +23,49 @@ public class BinaryTreeLeveTraversal {
         }
     }
 
-    public List<List<Integer>> levelOrder(TreeNode root) {
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
 
         // base condition
         if (root == null) {
             return result;
         }
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.offer(root);
-        while (!queue.isEmpty()) {
-            int levelSize = queue.size();
+        Deque<TreeNode> deque = new LinkedList<>();
+        deque.offerFirst(root);
+
+        while (!deque.isEmpty()) {
+            int levelSize = deque.size();
             List<Integer> currentLevel = new ArrayList<>();
 
             for (int i = 0; i < levelSize; i++) {
-                TreeNode currentNode = queue.poll();
+
+                TreeNode currentNode = deque.pollLast();
                 currentLevel.add(currentNode.val);
+
                 if (currentNode.left != null) {
-                    queue.offer(currentNode.left);
+                    deque.addFirst(currentNode.left);
                 }
                 if (currentNode.right != null) {
-                    queue.offer(currentNode.right);
+                    deque.addFirst(currentNode.right);
                 }
-              
 
             }
             result.add(currentLevel);
         }
-        return result;
+        return result.reversed();
 
     }
 
     public static void main(String[] args) {
-        BinaryTreeLeveTraversal sol = new BinaryTreeLeveTraversal();
-        TreeNode root = sol.new TreeNode(1);
-        // root.left = sol.new TreeNode(9);
-        // root.right = sol.new TreeNode(20);
-        // root.left.left = sol.new TreeNode(15);
-        // root.left.right = sol.new TreeNode(7);
+        BinaryTreeLevelOrder2 ans = new BinaryTreeLevelOrder2();
+        TreeNode root = ans.new TreeNode(3);
+        root.left = ans.new TreeNode(9);
+        root.right = ans.new TreeNode(20);
+        root.right.left = ans.new TreeNode(15);
+        root.right.right = ans.new TreeNode(7);
 
-        List<List<Integer>> result = sol.levelOrder(root);
+        List<List<Integer>> result = ans.levelOrderBottom(root);
+
         System.out.println(result);
 
     }
