@@ -1,4 +1,4 @@
-package linkedlistquestions;
+package Linkedlist;
 
 public class Mergesort {
 

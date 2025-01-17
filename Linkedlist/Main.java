@@ -1,4 +1,4 @@
-package linkedlistquestions;
+package Linkedlist;
 
 class ListNode {
     int val;

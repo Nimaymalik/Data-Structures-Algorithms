@@ -1,5 +1,4 @@
-package linkedlistquestions;
-
+package Merge_sort;
 public class Mergesort {
 
     public ListNode sortList(ListNode head) {
@@ -9,7 +8,7 @@ public class Mergesort {
         ListNode mid = getmid(head);
         ListNode left = sortList(head);
         ListNode right = sortList(mid);
-        return merge(left,right);
+        return merge(left, right);
 
     }
 
@@ -37,15 +36,15 @@ public class Mergesort {
     // get the mid of the node
 
     ListNode getmid(ListNode head) {
-        ListNode midPrev=null;
-        while(head!=null && head.next!=null){
-           midPrev=(midPrev==null)?head:midPrev.next;
-           head=head.next.next;
+        ListNode midPrev = null;
+        while (head != null && head.next != null) {
+            midPrev = (midPrev == null) ? head : midPrev.next;
+            head = head.next.next;
         }
-            ListNode mid=midPrev.next;
-            midPrev.next=null;
-            return mid;
-    
+        ListNode mid = midPrev.next;
+        midPrev.next = null;
+        return mid;
+
     }
 }
 

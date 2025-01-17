@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode_Questions_Important;
 
 import java.util.ArrayList;
 

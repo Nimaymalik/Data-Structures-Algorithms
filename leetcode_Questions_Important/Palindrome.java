@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode_Questions_Important;
 public class Palindrome {
     public static void main(String[] args) {
 
