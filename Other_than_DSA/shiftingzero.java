@@ -25,7 +25,6 @@ public class shiftingzero {
 
     public static void main(String[] args) {
         int[] arr = { 0, 1, 3, 0, 12 };
-        // shiftingzero(arr);
         System.out.println(Arrays.toString(shiftingzero(arr)));
 
     }
