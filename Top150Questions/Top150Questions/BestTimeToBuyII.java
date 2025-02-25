@@ -1,4 +1,3 @@
-package Top150Questions;
 
 public class BestTimeToBuyII {
     public static int maxProfit(int[] prices) {

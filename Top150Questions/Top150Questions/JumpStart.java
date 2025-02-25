@@ -1,5 +1,3 @@
-package Top150Questions;
-
 public class JumpStart {
 
     class Solution {

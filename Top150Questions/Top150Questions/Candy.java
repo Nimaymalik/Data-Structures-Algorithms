@@ -1,4 +1,3 @@
-package Top150Questions;
 
 import java.util.Arrays;
 

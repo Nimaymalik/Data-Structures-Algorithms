@@ -1,5 +1,3 @@
-package Top150Questions;
-
 public class BestTimeTobuy {
     private static int profit(int[] nums) {
         int profit = 0;

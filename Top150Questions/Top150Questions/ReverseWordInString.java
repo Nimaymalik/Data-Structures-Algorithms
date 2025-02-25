@@ -3,7 +3,7 @@ package Top150Questions;
 public class ReverseWordInString {
     public static String reverseWords(String s) {
 
-        // removinf the space for last and from between
+        // removing the space for last and from between
         String[] str = s.trim().split("\\s+");
 
         // use of string builder to append the string into new string
